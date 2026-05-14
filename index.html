@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="theme-color" content="#0b1020" />
+<title>L7 Ltd. — Games</title>
+<meta name="description" content="L7 Ltd. が公開している Web ゲーム一覧。" />
+<meta property="og:title" content="L7 Ltd. — Games" />
+<meta property="og:description" content="L7 Ltd. が公開している Web ゲーム一覧。" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://l7-ltd.github.io/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1020'/%3E%3Ctext x='50%25' y='54%25' font-family='system-ui,sans-serif' font-size='34' font-weight='800' text-anchor='middle' fill='%23ffd166'%3EL7%3C/text%3E%3C/svg%3E" />
+<style>
+  *,*::before,*::after { box-sizing: border-box; }
+  :root {
+    --bg: #0b1020;
+    --bg-2: #131a36;
+    --fg: #f5f7ff;
+    --muted: #aab0d0;
+    --accent: #ffd166;
+    --card: #161d3d;
+    --card-hover: #1c2550;
+    --border: rgba(255,255,255,0.08);
+    --shadow: 0 10px 30px rgba(0,0,0,0.35);
+  }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Segoe UI", Roboto, sans-serif;
+    background: radial-gradient(1200px 600px at 20% -10%, #1a2350 0%, transparent 60%),
+                radial-gradient(900px 500px at 100% 0%, #20194a 0%, transparent 55%),
+                var(--bg);
+    color: var(--fg);
+    min-height: 100dvh;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 56px 20px 80px;
+  }
+  header { margin-bottom: 36px; }
+  .logo {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 800; letter-spacing: 0.04em;
+    color: var(--accent);
+  }
+  .logo-mark {
+    width: 32px; height: 32px; border-radius: 8px;
+    background: linear-gradient(135deg, #ffd166, #ff8e3c);
+    display: grid; place-items: center;
+    color: #1a1230; font-weight: 900;
+  }
+  h1 {
+    font-size: clamp(28px, 5vw, 40px);
+    margin: 16px 0 8px;
+    letter-spacing: 0.01em;
+  }
+  .sub { color: var(--muted); margin: 0; }
+  main { margin-top: 28px; }
+  h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    margin: 32px 0 14px;
+    font-weight: 600;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    position: relative;
+    display: flex; flex-direction: column;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 20px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform .15s ease, background .15s ease, border-color .15s ease;
+    box-shadow: var(--shadow);
+  }
+  .card:hover, .card:focus-visible {
+    transform: translateY(-2px);
+    background: var(--card-hover);
+    border-color: rgba(255,209,102,0.4);
+    outline: none;
+  }
+  .card .emoji {
+    font-size: 36px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+  .card h3 {
+    margin: 0 0 6px;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .card .play {
+    margin-top: 14px;
+    align-self: flex-start;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent);
+  }
+  .card .play::after { content: " →"; }
+  footer {
+    margin-top: 56px;
+    color: var(--muted);
+    font-size: 13px;
+    border-top: 1px solid var(--border);
+    padding-top: 20px;
+  }
+  footer a { color: var(--muted); }
+  @media (prefers-reduced-motion: reduce) {
+    .card { transition: none; }
+    .card:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><span class="logo-mark">L7</span><span>L7 Ltd.</span></div>
+      <h1>Web ゲーム一覧</h1>
+      <p class="sub">ブラウザでそのまま遊べる、L7 Ltd. の小さなゲーム集です。</p>
+    </header>
+
+    <main>
+      <h2>Games</h2>
+      <div class="grid">
+        <a class="card" href="https://l7-ltd.github.io/slime-warehouse-rescue/">
+          <div class="emoji" aria-hidden="true">🟢</div>
+          <h3>スライム倉庫ぷくぷく救助</h3>
+          <p>ドラッグで移動。長押しで膨らみ水漏れと落下箱を止め、離して縮んで狭い棚を抜ける30秒ゲーム。</p>
+          <span class="play">遊ぶ</span>
+        </a>
+        <a class="card" href="https://l7-ltd.github.io/ufo-cow-ranch/">
+          <div class="emoji" aria-hidden="true">🛸</div>
+          <h3>UFO 牛すいこみ牧場</h3>
+          <p>UFO を左右に動かし、長押しでビームを広げて牛をまとめ取り。爆弾や農夫は避ける30秒スコアアタック。</p>
+          <span class="play">遊ぶ</span>
+        </a>
+        <a class="card" href="https://l7-ltd.github.io/chain-numbers/">
+          <div class="emoji" aria-hidden="true">🔢</div>
+          <h3>Chain Numbers</h3>
+          <p>同じ数字を2個以上なぞって離すと +1 に合体する数字パズル。連鎖で高得点を狙おう。</p>
+          <span class="play">遊ぶ</span>
+        </a>
+      </div>
+    </main>
+
+    <footer>
+      <p>© L7 Ltd. · <a href="https://github.com/L7-Ltd">GitHub</a></p>
+    </footer>
+  </div>
+</body>
+</html>
